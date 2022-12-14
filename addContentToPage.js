@@ -6,7 +6,7 @@ import { appendContentToPage } from "./lib/notion";
 
 alfredNotifier();
 
-await appendContentToPage(process.env.pageDataId, alfy.input);
+await appendContentToPage(alfy.input);
 
 console.log(
   JSON.stringify({

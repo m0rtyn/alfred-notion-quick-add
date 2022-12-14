@@ -6,7 +6,11 @@
 
 ## Install
 
-Download from https://github.com/jacobSingh/alfred-notion-quick-add/releases
+via NPM
+
+```
+$ npm install --global @m0rtyn/alfred-notion-quick-add
+```
 
 ## Config
 

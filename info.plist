@@ -8,6 +8,19 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>0E0C58BD-3378-4C13-8E90-C3A82C558D0C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D0502E40-0548-4A3C-8396-888346B40857</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2606B0EC-737C-4051-843A-4BD323FFE9A9</key>
 		<array/>
 		<key>2E6C30C3-81DC-4CCB-941C-DE1F17375D68</key>
@@ -38,6 +51,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>6E190D68-77F2-44EC-8EC6-FCD8CD72E0E5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6996A904-E6C0-411D-85CA-625DC8F3830A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0E0C58BD-3378-4C13-8E90-C3A82C558D0C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -199,6 +225,19 @@
 		</array>
 		<key>C0423914-AC5C-45BB-863E-04329E58E5FC</key>
 		<array/>
+		<key>D0502E40-0548-4A3C-8396-888346B40857</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8A9C0297-2413-4C71-937A-848B5C1E5123</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D1B4F4DC-E106-48AC-A4F2-1472D3D72A53</key>
 		<array>
 			<dict>
@@ -267,7 +306,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Paulo Portella</string>
+	<string>m0rtyn</string>
 	<key>description</key>
 	<string>Easily capture data into your Notion task inbox</string>
 	<key>disabled</key>
@@ -276,6 +315,95 @@
 	<string>Notion Quick Add</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>pwd &amp;&amp; ./node_modules/.bin/run-node addContentToPage.js "$*"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D0502E40-0548-4A3C-8396-888346B40857</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>Content added to page</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>8A9C0297-2413-4C71-937A-848B5C1E5123</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>:note</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Add to Inbox</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>6996A904-E6C0-411D-85CA-625DC8F3830A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>DATABASE_ID</key>
+					<string>{var:DATABASE_ID}</string>
+					<key>pageDataId</key>
+					<string>{var:pageDataId}</string>
+					<key>pageID</key>
+					<string>{var:pageID}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>0E0C58BD-3378-4C13-8E90-C3A82C558D0C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -303,7 +431,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>:</string>
+				<string>deprecated</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
@@ -330,11 +458,9 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>45</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>N</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -849,9 +975,16 @@ do shell script "source ~/.profile; " &amp; "nac " &amp; title's quoted form &am
 		<key>098C3BEF-23E6-41DF-B37F-F775C1D8166D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>795</integer>
+			<integer>1015</integer>
 			<key>ypos</key>
-			<integer>15</integer>
+			<integer>475</integer>
+		</dict>
+		<key>0E0C58BD-3378-4C13-8E90-C3A82C558D0C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>80</integer>
 		</dict>
 		<key>2606B0EC-737C-4051-843A-4BD323FFE9A9</key>
 		<dict>
@@ -863,86 +996,100 @@ do shell script "source ~/.profile; " &amp; "nac " &amp; title's quoted form &am
 		<key>2E6C30C3-81DC-4CCB-941C-DE1F17375D68</key>
 		<dict>
 			<key>xpos</key>
-			<integer>615</integer>
+			<integer>835</integer>
 			<key>ypos</key>
-			<integer>480</integer>
+			<integer>940</integer>
 		</dict>
 		<key>3E01A229-5A85-446C-8806-85391BEFF8F1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>355</integer>
+			<integer>575</integer>
 			<key>ypos</key>
-			<integer>225</integer>
+			<integer>685</integer>
 		</dict>
 		<key>4646EAF8-47A9-4D4C-9E0F-F92BA22432B3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1240</integer>
+			<integer>1460</integer>
 			<key>ypos</key>
-			<integer>225</integer>
+			<integer>685</integer>
 		</dict>
 		<key>4DE2DDD1-8D66-4750-BCA5-DCF4427E32B1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>855</integer>
+			<integer>1075</integer>
 			<key>ypos</key>
-			<integer>680</integer>
+			<integer>1140</integer>
 		</dict>
 		<key>52D57ADD-3C54-4B4A-9CCC-11EB7CC6F724</key>
 		<dict>
 			<key>xpos</key>
-			<integer>755</integer>
+			<integer>975</integer>
 			<key>ypos</key>
-			<integer>515</integer>
+			<integer>975</integer>
+		</dict>
+		<key>6996A904-E6C0-411D-85CA-625DC8F3830A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>55</integer>
 		</dict>
 		<key>6E190D68-77F2-44EC-8EC6-FCD8CD72E0E5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>355</integer>
+			<integer>575</integer>
 			<key>ypos</key>
-			<integer>355</integer>
+			<integer>815</integer>
 		</dict>
 		<key>7BE1EDBE-5966-4521-BD97-D299C48833ED</key>
 		<dict>
 			<key>xpos</key>
-			<integer>455</integer>
+			<integer>675</integer>
 			<key>ypos</key>
-			<integer>95</integer>
+			<integer>555</integer>
+		</dict>
+		<key>8A9C0297-2413-4C71-937A-848B5C1E5123</key>
+		<dict>
+			<key>xpos</key>
+			<integer>650</integer>
+			<key>ypos</key>
+			<integer>55</integer>
 		</dict>
 		<key>8AC2D3FB-5295-4FD3-A4EB-078BC9578DA2</key>
 		<dict>
 			<key>xpos</key>
-			<integer>755</integer>
+			<integer>975</integer>
 			<key>ypos</key>
-			<integer>225</integer>
+			<integer>685</integer>
 		</dict>
 		<key>9A4EEF55-F486-4164-97CA-A8591FD0D032</key>
 		<dict>
 			<key>xpos</key>
-			<integer>355</integer>
+			<integer>575</integer>
 			<key>ypos</key>
-			<integer>500</integer>
+			<integer>960</integer>
 		</dict>
 		<key>9F8DCFF3-A2BA-4499-B819-BAA7930601F8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>250</integer>
+			<integer>470</integer>
 			<key>ypos</key>
-			<integer>65</integer>
+			<integer>525</integer>
 		</dict>
 		<key>A83DF413-2EFA-4B8A-996E-6B77DA30C9CE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1045</integer>
+			<integer>1265</integer>
 			<key>ypos</key>
-			<integer>500</integer>
+			<integer>960</integer>
 		</dict>
 		<key>ADF0234B-71FA-4050-9C78-560E37E792F0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>80</integer>
+			<integer>300</integer>
 			<key>ypos</key>
-			<integer>65</integer>
+			<integer>525</integer>
 		</dict>
 		<key>C0423914-AC5C-45BB-863E-04329E58E5FC</key>
 		<dict>
@@ -951,26 +1098,33 @@ do shell script "source ~/.profile; " &amp; "nac " &amp; title's quoted form &am
 			<key>ypos</key>
 			<integer>2335</integer>
 		</dict>
+		<key>D0502E40-0548-4A3C-8396-888346B40857</key>
+		<dict>
+			<key>xpos</key>
+			<integer>415</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
 		<key>D1B4F4DC-E106-48AC-A4F2-1472D3D72A53</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1040</integer>
+			<integer>1260</integer>
 			<key>ypos</key>
-			<integer>355</integer>
+			<integer>815</integer>
 		</dict>
 		<key>D82C2722-AABA-4604-B368-48AF183D3395</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1040</integer>
+			<integer>1260</integer>
 			<key>ypos</key>
-			<integer>225</integer>
+			<integer>685</integer>
 		</dict>
 		<key>DB1E8306-39C1-4DF4-88C5-022A48EEE58B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>685</integer>
+			<integer>905</integer>
 			<key>ypos</key>
-			<integer>105</integer>
+			<integer>565</integer>
 		</dict>
 		<key>E2898CEA-D8EE-4E08-9E30-850DBE395E3B</key>
 		<dict>
@@ -982,31 +1136,33 @@ do shell script "source ~/.profile; " &amp; "nac " &amp; title's quoted form &am
 		<key>E81B4619-E096-4746-B144-3F35920CF317</key>
 		<dict>
 			<key>xpos</key>
-			<integer>660</integer>
+			<integer>880</integer>
 			<key>ypos</key>
-			<integer>680</integer>
+			<integer>1140</integer>
 		</dict>
 		<key>E8BD0671-6299-402B-BDE9-6BF9838EC712</key>
 		<dict>
 			<key>xpos</key>
-			<integer>515</integer>
+			<integer>735</integer>
 			<key>ypos</key>
-			<integer>225</integer>
+			<integer>685</integer>
 		</dict>
 		<key>F916397E-4FE8-45A9-BCAC-7D7FAF6A2E9F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>945</integer>
+			<integer>1165</integer>
 			<key>ypos</key>
-			<integer>250</integer>
+			<integer>710</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
 	<dict>
 		<key>DATABASE_ID</key>
-		<string>aed5148908a44f07ba30014f7d561eef</string>
+		<string></string>
 		<key>NOTION_TOKEN</key>
-		<string>secret_37sOVJ1rPhvaWzNS2mnlqjEleKeDEplQddY5z46HSZd</string>
+		<string>secret_W0SmY3p6a7Fa4O4f0cduNuZrnIvDgDk2TSPyCTZ0u6f</string>
+		<key>PAGE_ID</key>
+		<string>645abe3b-2ef2-412f-bde7-9aa117a4c800</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
@@ -1016,6 +1172,6 @@ do shell script "source ~/.profile; " &amp; "nac " &amp; title's quoted form &am
 	<key>version</key>
 	<string>0.0.2</string>
 	<key>webaddress</key>
-	<string>https://github.com/pauloportella/alfred-notion-quick-add</string>
+	<string>https://github.com/m0rtyn/alfred-notion-quick-add</string>
 </dict>
 </plist>
