@@ -2,8 +2,6 @@
 
 > Easily capture data into a Notion database.
 
-![Walkthrough](/walkthrough.gif)
-
 ## Install
 
 via NPM
