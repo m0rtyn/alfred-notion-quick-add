@@ -4,12 +4,12 @@
 
 ## Install
 
-via NPM
-
-```
+```bash
+# 1. Install
 $ npm install --global @m0rtyn/alfred-notion-quick-add
 
-# link repo with alfred workflows
+
+# 2. Link repo with alfred workflows
 $ ln -s <PATH_TO_THIS_REPO> /Users/<USER>/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows
 ```
 
