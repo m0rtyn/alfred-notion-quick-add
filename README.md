@@ -10,6 +10,9 @@ via NPM
 
 ```
 $ npm install --global @m0rtyn/alfred-notion-quick-add
+
+# link repo with alfred workflows
+$ ln -s <PATH_TO_THIS_REPO> /Users/<USER>/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows
 ```
 
 ## Config
